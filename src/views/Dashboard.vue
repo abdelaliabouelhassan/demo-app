@@ -9,6 +9,29 @@
       <div class=" w-full py-5">
         <div class="w-full h-px bg-tertiary-200 bg-opacity-10"></div>
       </div>
+      <div class=" w-full grid grid-cols-3 gap-10">
+        <AppGraphCard class=" col-span-2" />
+        <FavoriteConfigurationCard />
+      </div>
+        <div class=" w-full grid grid-cols-3 gap-10 pt-10">
+        <MostFavoriteOptionsCard  />
+        <FavoriteConfigurationCard class=" col-span-2" />
+      </div>
+   
     </div>
   </div>
 </template>
+
+
+<script>
+import AppGraphCard from '../components/cards/AppGraphCard.vue' 
+import FavoriteConfigurationCard from '../components/cards/FavoriteConfigurationCard.vue'
+import MostFavoriteOptionsCard from '../components/cards/MostFavoriteOptionsCard.vue'
+export default {
+  components:{
+    AppGraphCard,
+    FavoriteConfigurationCard,
+    MostFavoriteOptionsCard
+  }
+}
+</script>
