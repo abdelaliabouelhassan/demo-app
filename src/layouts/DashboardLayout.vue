@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-tertiary-100">
+  <div class="">
     <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
     <div class="relative z-40 md:hidden" role="dialog" aria-modal="true">
       <!--
@@ -396,10 +396,11 @@
             <div class="w-full h-px bg-tertiary-200 bg-opacity-10"></div>
           </div>
           <nav class="mt-5 flex-1 px-2 bg-tertiary-100 space-y-1">
-            <a
+            <router-link
+              :to="item.to"
               v-for="(item, index, key) in navItems"
               :key="key"
-              href="#"
+              :href="item.to"
               class="
                 group
                 flex flex-col
@@ -447,8 +448,8 @@
                 v-show="item.isDropdownOpen && item.children.length > 0"
                 class="w-full flex flex-col items-start space-y-4 pl-10 py-2"
               >
-                <a
-                  href="javascript:void(0)"
+                <router-link
+                  :to="child.to"
                   @click="setChildeActive(item, child)"
                   v-for="(child, chindex, chkey) in item.children"
                   :key="chkey"
@@ -457,18 +458,29 @@
                     'hover:text-primary-100': !item.active,
                     'hover:text-white': item.active,
                   }"
-                  >{{ child.name }}</a
                 >
+                  {{ child.name }}
+                </router-link>
               </div>
-            </a>
+            </router-link>
           </nav>
         </div>
         <div class="w-full">
-          <div class=" px-4 w-full">
+          <div class="px-4 w-full">
             <div class="w-full h-px bg-tertiary-200 bg-opacity-10"></div>
           </div>
-          <div class="flex-shrink-0 flex  border-gray-200 p-4">
-            <a href="#" class="flex-shrink-0 w-full group  flex items-center justify-between">
+          <div class="flex-shrink-0 flex border-gray-200 p-4">
+            <a
+              href="#"
+              class="
+                flex-shrink-0
+                w-full
+                group
+                flex
+                items-center
+                justify-between
+              "
+            >
               <div class="flex items-center space-x-2">
                 <div class="w-9 h-9 rounded-lg flex bg-secondary-100">
                   <span class="m-auto text-xl font-normal text-white">H</span>
@@ -690,7 +702,7 @@ export default {
         children: [
           {
             name: "Overview",
-            to: "",
+            to: "user-management",
             active: false,
           },
           {
