@@ -27,7 +27,7 @@
                   lg:px-8
                 "
               >
-                <table class="min-w-full spacing-table"  cellpadding="10">
+                <table class="min-w-full spacing-table" cellpadding="10">
                   <thead>
                     <tr>
                       <th
@@ -208,9 +208,8 @@
                         class="
                           whitespace-nowrap
                           py-4
-                          px-3
+                          pl-10
                           text-sm text-gray-500
-                          pr-10
                           rounded-r-full
                         "
                       >
@@ -381,9 +380,8 @@
                         class="
                           whitespace-nowrap
                           py-4
-                          px-3
                           text-sm text-gray-500
-                          pr-10
+                          pl-10
                           rounded-r-full
                         "
                       >
@@ -424,7 +422,7 @@
                       </td>
                     </tr>
 
-                     <tr class="w-full rounded-full bg-white">
+                    <tr class="w-full rounded-full bg-white">
                       <td
                         class="
                           whitespace-nowrap
@@ -446,7 +444,6 @@
                               src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                               alt=""
                             />
-                           
                           </div>
                           <div class="ml-4">
                             <div
@@ -507,9 +504,8 @@
                         class="
                           whitespace-nowrap
                           py-4
-                          px-3
                           text-sm text-gray-500
-                          pr-10
+                          pl-10
                           rounded-r-full
                         "
                       >
@@ -550,7 +546,7 @@
                       </td>
                     </tr>
 
-                      <tr class="w-full rounded-full bg-white">
+                    <tr class="w-full rounded-full bg-white">
                       <td
                         class="
                           whitespace-nowrap
@@ -572,7 +568,6 @@
                               src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                               alt=""
                             />
-                           
                           </div>
                           <div class="ml-4">
                             <div
@@ -610,7 +605,7 @@
                               >Model Artist</span
                             >
                           </div>
-                           <div class="bg-[#75A0F0] rounded-full px-4 py-1">
+                          <div class="bg-[#75A0F0] rounded-full px-4 py-1">
                             <span class="text-xl text-white font-semibold"
                               >Texture Artist</span
                             >
@@ -634,16 +629,13 @@
                           text-sm text-gray-500
                         "
                       >
-                        <div class=" w-80 invisible ">
-
-                        </div>
+                        <div class="w-80 invisible"></div>
                       </td>
                       <td
                         class="
                           whitespace-nowrap
-                         
                           text-sm text-gray-500
-                          
+                          pl-10
                           rounded-r-full
                         "
                       >
@@ -714,12 +706,9 @@ export default {
 
 <style>
 .spacing-table {
-  
-  
   border-collapse: separate;
   border-spacing: 0 15px; /* this is the ultimate fix */
 }
-
 </style>
 <style scoped>
 .top {
