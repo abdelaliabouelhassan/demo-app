@@ -2,8 +2,8 @@
   <svg
     class="fill-current"
     xmlns="http://www.w3.org/2000/svg"
-    width="32.396"
-    height="35.367"
+    width="31.396"
+    height="33.367"
     viewBox="0 0 26.396 35.367"
   >
     <g

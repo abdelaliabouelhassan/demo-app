@@ -633,18 +633,21 @@
                           px-3
                           text-sm text-gray-500
                         "
-                      ></td>
+                      >
+                        <div class=" w-80 invisible ">
+
+                        </div>
+                      </td>
                       <td
                         class="
                           whitespace-nowrap
-                          py-4
-                          px-3
+                         
                           text-sm text-gray-500
-                          pr-10
+                          
                           rounded-r-full
                         "
                       >
-                        <div class="flex items-center space-x-4">
+                        <div class="flex items-center space-x-4 w-full">
                           <button class="flex items-center space-x-2">
                             <RestIcon />
                             <span
@@ -717,4 +720,28 @@ export default {
   border-spacing: 0 15px; /* this is the ultimate fix */
 }
 
+</style>
+<style scoped>
+.top {
+  transform: rotate(50deg);
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 </style>

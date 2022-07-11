@@ -20,10 +20,10 @@
           lg:grid-cols-3
           space-y-4
           lg:space-y-0
-          gap-10
+          lg:gap-10
         "
       >
-        <AppGraphCard class="col-span-2" />
+        <AppGraphCard class="lg:col-span-2" />
         <FavoriteConfigurationCard />
       </div>
       <div
@@ -33,7 +33,7 @@
           lg:grid-cols-3
           space-y-4
           lg:space-y-0
-          gap-10
+          lg:gap-10
           pt-10
         "
       >

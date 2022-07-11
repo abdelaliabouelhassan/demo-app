@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full lg:max-h-96 h-full  py-10 px-10 rounded-lg bg-white relative ">
+  <div class="w-full xl:max-h-96 lg:max-h-[37rem] h-full  py-10 px-10 rounded-lg bg-white relative ">
     <div class="w-full flex items-center justify-between z-10">
       <span class="text-xl font-bold text-tertiary-300 text-opacity-75"
         >Views 
@@ -86,7 +86,7 @@
     </div>
     <span class=" text-sm text-tertiary-300 font-bold text-opacity-75">1.394 <span class=" font-light">views</span></span>
 
-    <div class=" w-full lg:flex lg:flex-row grid grid-cols-5 space-y-4 lg:space-y-0 items-start lg:justify-between pt-6">
+    <div class=" w-full xl:flex xl:flex-row grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-8  xl:space-y-0 items-start xl:justify-between pt-6">
         <div>
             <ViewsGraph time="00:00" :value="25" :percentage="10" />
         </div>

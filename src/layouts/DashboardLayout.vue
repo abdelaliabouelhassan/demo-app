@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
-    <div class="relative z-40 md:hidden" role="dialog" aria-modal="true">
+    <div class="relative z-40 md:hidden" role="dialog" aria-modal="true" v-if="show">
       <!--
       Off-canvas menu backdrop, show/hide based on off-canvas menu state.
 
@@ -40,6 +40,7 @@
         -->
           <div class="absolute top-0 right-0 -mr-12 pt-2">
             <button
+             @click="CloseSidebar"
               type="button"
               class="
                 ml-1
@@ -74,7 +75,7 @@
               </svg>
             </button>
           </div>
-          <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+          <div class="flex-1 h-0 pt-5 pb-4 px-2 overflow-y-auto">
             <div class="flex-shrink-0 flex items-center px-4">
               <LogoIcon />
             </div>
@@ -91,7 +92,7 @@
                 items-start
                 px-2
                 py-2
-                text-xl
+                text-lg
                 font-sans font-light
                 rounded-lg
               "
@@ -172,7 +173,7 @@
                   Heinz Hübner
                 </p>
               </div>
-              <div>
+              <div class=" pr-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="14.142"
@@ -211,7 +212,7 @@
           bg-tertiary-100
         "
       >
-        <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
+        <div class="flex-1 flex flex-col px-2 pt-5 pb-4 overflow-y-auto">
           <div class="flex items-center flex-shrink-0 px-4 py-10">
             <LogoIcon />
           </div>
@@ -242,7 +243,7 @@
                 items-start
                 px-2
                 py-2
-                text-xl
+                text-lg
                 font-sans font-light
                 rounded-lg
               "
@@ -332,7 +333,7 @@
                   Heinz Hübner
                 </p>
               </div>
-              <div>
+              <div class=" pr-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="14.142"
@@ -369,6 +370,7 @@
         "
       >
         <button
+         @click="OpenSideBar"
           type="button"
           class="
             -ml-0.5
@@ -624,10 +626,20 @@ export default {
       item.isDropdownOpen = false;
       child.active = true;
     };
+    let show = ref(false);
+    const CloseSidebar = () => {
+      show.value = false;
+    };
+    const OpenSideBar = () => {
+      show.value = true;
+    };
     return {
       navItems,
       toggleDropdown,
       setChildeActive,
+      show,
+      CloseSidebar,
+      OpenSideBar,
     };
   },
 };
